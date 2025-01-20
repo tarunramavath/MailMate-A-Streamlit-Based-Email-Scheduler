@@ -1,71 +1,60 @@
-# MailMate-A-Streamlit-Based-Email-Scheduler
+An easy-to-use application that allows users to schedule emails to be sent at specific times. This tool is designed for both personal and professional use, making email management more efficient and timely.
 
-A **Streamlit-based application** for sending and scheduling emails. The application supports file attachments and email validation, providing a simple and user-friendly interface.
-
----
-
-## 📋 Features
-
-- **Send Emails Instantly**: Quickly send emails with just a few clicks.
-- **Schedule Emails**: Set a daily schedule to send emails automatically at a specific time.
-- **File Attachments**: Attach files to your emails easily.
-- **Email Validation**: Ensures sender and recipient email addresses are valid Gmail accounts.
-- **Interactive UI**: Built using Streamlit for an intuitive user experience.
-
----
-
-## 🛠️ Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/email-scheduler.git
-   cd email-scheduler
-Create and activate a virtual environment:
+Features
+Schedule emails to be sent at a future date and time.
+Support for multiple email recipients.
+Integration with popular email services like Gmail, Outlook, etc.
+Save drafts of scheduled emails.
+Notifications for successful email delivery or errors.
+Support for attachments.
+Simple and intuitive user interface.
+Installation
+Clone the repository:
 
 bash
 Copy
 Edit
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install dependencies:
+git clone https://github.com/your-username/email-scheduler.git
+cd email-scheduler
+Install the required dependencies:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
+Set up environment variables: Create a .env file in the project root and add the following:
+
+env
+Copy
+Edit
+EMAIL_HOST=smtp.example.com
+EMAIL_PORT=587
+EMAIL_USER=your-email@example.com
+EMAIL_PASSWORD=your-password
 Run the application:
 
 bash
 Copy
 Edit
-streamlit run app.py
-🚀 Usage
-Open the application in your web browser (usually at http://localhost:8501).
-Fill out the required fields:
-Sender Email: Enter your Gmail address.
-App Password: Provide the app password for your Gmail account.
-Recipient Email: Enter the recipient's Gmail address.
-Email Subject: Type the subject of your email.
-Email Body: Compose the message you want to send.
-Attach a File (optional): Upload a file to include in your email.
-Send Time (optional): Set a daily schedule in HH:MM format (24-hour clock).
-Click:
-"Send Email Now": Send the email immediately.
-"Schedule Email": Schedule the email to be sent daily at the specified time.
-📦 Requirements
-Python 3.7 or higher
-Gmail Account with App Password: Learn how to create an app password here.
-📂 Project Structure
-plaintext
-Copy
-Edit
-email-scheduler/
-├── temp/                  # Temporary directory for uploaded files
-├── app.py                 # Main application code
-├── requirements.txt       # List of dependencies
-└── README.md              # Project documentation
-🔒 Security Note
-Avoid hardcoding sensitive information like Gmail passwords in the code.
-Use environment variables or secure storage solutions to manage credentials.
-🤝 Contributions
-Contributions are welcome! Feel free to fork this repository and submit pull requests with improvements or new features.
+python app.py
+Usage
+Open the application.
+Log in with your email credentials.
+Compose an email:
+Enter the recipient(s).
+Add a subject and body.
+Attach files if necessary.
+Set the desired date and time for the email to be sent.
+Click "Schedule."
+The application will send the email at the specified time.
+
+Configuration
+Email Service Providers: Configure the EMAIL_HOST and EMAIL_PORT in the .env file for your preferred email provider.
+Time Zone: Update the application's time zone in settings.py if needed.
+Requirements
+Python 3.8 or higher
+Flask (for web-based interface)
+smtplib or an equivalent library for sending emails
+A database for storing scheduled emails (SQLite, PostgreSQL, or others)
+Contribution
+We welcome contributions!
